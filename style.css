@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --VeryLightGrayishBlue: #f6f6fe;
+    --LightGrayishBlue: #b3b5c6;
+    --GrayishBlue: #6d708d;
+    --DarkGrayishBlue: #494c5f;
+    
+}
+
+@media only screen and (max-width: 500){
+    #wrap{
+        background-color: red;
+    }
+}
+
+/* COMPONENETS */
+
+body, html{
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+h2{
+    color: var(--GrayishBlue);
+    margin-bottom: 2rem;
+}
+
+section{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+/* IDS */
+
+#wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    /* padding: 3rem; */
+}
+
+#toggle{
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    cursor: pointer;
+    position: relative;
+}
+
+#toggle::before{
+    position: absolute;
+    content: '';
+    background-color: white;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    margin: 3.5px;
+    border: none;
+    transition-duration: 500ms;
+}
+
+#check{
+    display: none;
+}
+#check:checked +  #toggle::before {
+    transform: translateX(30px);
+}
+
+
+#check:checked ~ .plans .annual-price{
+    display: block;
+}
+
+#check:checked ~ .plans .month-price{
+    /* display: none; */
+    color: red;
+}
+
+/* CLASSES */
+
+
+.plan-type{
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+    margin: 2rem;
+    margin-bottom: 3rem;
+    color: var(--LightGrayishBlue);
+}
+
+.plans{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    margin-bottom: 5rem;
+}
+
+
+.month-price{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+
+.items{
+    border-bottom: 1px solid var(--LightGrayishBlue);
+    width: 100%;
+    height: 20px;
+    padding-block: 1rem;
+    text-align: center;
+}
+
+.info-btn{
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    border-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+.month-price{
+    border-bottom: 1px solid var(--LightGrayishBlue);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.annual-price{
+    border-bottom: 1px solid var(--LightGrayishBlue);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    display: none;
+}
+
+
+
+
+/* BASIC */
+
+.basic{
+    background-color: var(--VeryLightGrayishBlue);
+    /* width:  100%; */
+    color: var(--GrayishBlue);
+
+}
+
+.basic .month-price{
+    color: var(--DarkGrayishBlue);
+    margin-top: 1.5rem;
+
+}
+
+.basic .info-btn{
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    color: var(--VeryLightGrayishBlue);
+}
+
+.basic .info-btn:hover{
+    background-image: none;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid var(--GrayishBlue);
+    background-color: transparent;
+}
+
+
+
+.basic-wrap{
+
+    /* padding-top: 25px; */
+}
+
+
+/* PROFESSIONAL */
+
+.professional{
+    color: var(--VeryLightGrayishBlue);
+    background-image: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    /* width: 100%; */
+    /* height: 430px; */
+}
+
+
+.professional .month-price{
+    margin-top: 1.5rem;
+
+}
+
+.professional .info-btn{
+    color: hsl(237, 63%, 64%);
+}
+
+.professional .info-btn:hover{
+    color: var(--VeryLightGrayishBlue);
+    border: 1px solid var(--VeryLightGrayishBlue);
+    background-color: transparent;
+}
+
+
+
+
+
+
