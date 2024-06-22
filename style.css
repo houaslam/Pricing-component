@@ -12,11 +12,7 @@
     
 }
 
-@media only screen and (max-width: 500){
-    #wrap{
-        background-color: red;
-    }
-}
+
 
 /* COMPONENETS */
 
@@ -219,4 +215,8 @@ section{
 
 
 
-
+@media only screen and (max-width: 500){
+    #wrap{
+        background-color: red;
+    }
+}
